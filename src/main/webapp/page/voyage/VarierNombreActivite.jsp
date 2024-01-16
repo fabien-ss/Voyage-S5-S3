@@ -15,7 +15,9 @@
     HttpSession session1 = request.getSession();
     Voyage voyage = (Voyage) session1.getAttribute("voyage");
     Connection connect=ConnexionPgsql.dbConnect();
-    ActiBouq[] activiteBouquet = ActiBouq.getActiBouqById(connect, voyage.getIdBouquet());
+    ActiBouq actiBouq = new ActiBouq();
+    actiBouq.setIdBouquet(voyage.getIdBouquet());
+    ActiBouq[] activiteBouquet = actiBouq.getActiBouqById(connect);
 
     if(request.getParameter("varierok") != null){
         String[] nombre = request.getParameterValues("nombre[]");

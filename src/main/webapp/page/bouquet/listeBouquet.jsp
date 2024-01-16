@@ -17,8 +17,8 @@
                 </span>
                 
                 <span style="float: right">
-                    <a href="/Voyage_war_exploded/page/bouquet/listeActiviteBouquet.jsp?idBouquet=<%=lsBouq[i].getIdBouquet()%>">Voir les activités</a>
-                    <a href="/Voyage_war_exploded/page/activite/ajouterActivite.jsp?idBouquet=<%=lsBouq[i].getIdBouquet()%>">Ajouter activités</a>
+                    <a href="/Voyage-1.0-SNAPSHOT/page/bouquet/listeActiviteBouquet.jsp?idBouquet=<%=lsBouq[i].getIdBouquet()%>">Voir les activités</a>
+                    <a href="/Voyage-1.0-SNAPSHOT/page/activite/ajouterActivite.jsp?idBouquet=<%=lsBouq[i].getIdBouquet()%>">Ajouter activités</a>
                 </span>
             </li>
         <%}%>

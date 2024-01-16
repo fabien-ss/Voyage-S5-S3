@@ -26,7 +26,7 @@
 %>
 <%@include file="../structure/header.jsp" %>
     <div class="row">
-        <h1>Achat billet</h1>
+        <h1>Réserver billet</h1>
         <form method="post" class="form-control mt-3" action="acheter.jsp">
             <div class="col-6">
                 <label style="" class="col-form-label">Voyage</label>

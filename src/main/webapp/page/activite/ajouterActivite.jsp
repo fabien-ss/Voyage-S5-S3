@@ -42,7 +42,7 @@
 <body>
 <%@include file="../structure/header.jsp" %>
     <div>
-        <h1>Ajouter activité à<%bouquet.getNom();%></h1>
+        <h1>Maj Ajouter activité à<%bouquet.getNom();%></h1>
         <form method="post" action="ajouterActivite.jsp">
             <input type="hidden" name="idBouquet" value="<%=bouquet.getIdBouquet()%>">
             <select name="id">

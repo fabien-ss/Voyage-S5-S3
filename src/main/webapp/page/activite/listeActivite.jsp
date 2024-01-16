@@ -16,13 +16,15 @@
 %>
 <%@include file="../structure/header.jsp" %>
 <div class="row">
+    <h1>List de nos activités</h1>
     <table class="table table-active">
         <tr>
-            <th>Nom bouquet dqsdq</th>
+            <th>Nom bouquet</th>
             <th>Nom Activité</th>
         </tr>
         <% for(int i = 0; i < activites.size(); i++){  %>
         <tr>
+            <td></td>
             <td>
                 <%=activites.get(i).getNom() %>
                 <a href="updatePrix.jsp?idActivite=<%=activites.get(i).getIdActivite()%>">
