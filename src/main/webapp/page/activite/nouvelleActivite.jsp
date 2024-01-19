@@ -18,8 +18,8 @@
 
     }
 %>
-
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
 <h1>Nouvelle activité</h1>
     <div class="row">
         <form method="post" class="form-control" action="nouvelleActivite.jsp">

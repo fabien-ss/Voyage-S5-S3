@@ -1,6 +1,7 @@
 <%@ page import="com.example.voyage.prix.VPrixVoyage" %>
 <%@ page import="java.sql.Connection" %>
-<%@ page import="com.example.voyage.dbUtil.ConnexionPgsql" %><%--
+<%@ page import="com.example.voyage.dbUtil.ConnexionPgsql" %>
+<%--
   Created by IntelliJ IDEA.
   User: fabien
   Date: 1/9/24
@@ -21,7 +22,7 @@
         listeVoyage = new VPrixVoyage[0];
         error = e.getMessage();
     }
-
+    connect.close();
 %>
 <%@include file="../structure/header.jsp" %>
 <div class="row">
@@ -32,8 +33,8 @@
         </tr>
         <% for (VPrixVoyage vPrixVoyage: listeVoyage) { %>
             <tr>
-            <td><%=vPrixVoyage.getNom()%></td>
-            <td><%=vPrixVoyage.getPrix()%></td>
+                <td><%=vPrixVoyage.getNom()%></td>
+                <td><%=vPrixVoyage.getPrix()%></td>
             </tr>
         <% } %>
 

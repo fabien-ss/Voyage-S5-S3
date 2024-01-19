@@ -11,7 +11,6 @@
 <head>
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="text-align: center;">
@@ -23,22 +22,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="../voyage/chercherVoyage.jsp">Rechercher voyage</a>
+                <a class="nav-link" href="../voyage/NouveauVoyage.jsp">Voyage</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../voyage/NouveauVoyage.jsp">Nouveau voyage</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../activite/nouvelleActivite.jsp">Nouvelle activite</a>
+                <a class="nav-link" href="../activite/nouvelleActivite.jsp">Activité</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../bouquet/listeBouquet.jsp">Bouquets</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../bouquet/nouveauBouquet.jsp">Nouveau bouquet</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../activite/ajouterQuoteActivite.jsp">Ajouter quota activite</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../stock/EtatDeStock.jsp">Etat de stock</a>
@@ -47,11 +37,15 @@
                 <a class="nav-link" href="../billet/acheter.jsp">Achat billet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../activite/listeActivite.jsp">Liste des activites</a>
+                <a class="nav-link" href="../poste/ajoutMainDoeuvre.jsp">Poste</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../voyage/margeBeneficiaire.jsp">Modifier marge</a>
+            </li>
+
         </ul>
     </div>
 </nav>
 
 <div class="container">
-

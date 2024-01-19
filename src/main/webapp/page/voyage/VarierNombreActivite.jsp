@@ -22,7 +22,6 @@
     if(request.getParameter("varierok") != null){
         String[] nombre = request.getParameterValues("nombre[]");
         String[] idActivite = request.getParameterValues("idActivite[]");
-        out.println(idActivite.length);
         voyage.insert(connect);
         NombreVoyageActivite.insertLsData(idActivite, nombre, voyage.getIdVoyage());
         response.sendRedirect("NouveauVoyage.jsp");
@@ -30,7 +29,8 @@
 
     connect.close();
 %>
-
+<%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
 <div class="container">
     <div class="row">
         <div class="co-6">

@@ -20,6 +20,7 @@
 %>
 
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
 <h1>Etat de stock</h1>
 <div class="row">
     <div class="col-4">

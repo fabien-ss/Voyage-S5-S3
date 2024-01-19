@@ -17,15 +17,8 @@
         connect.close();
     }
 %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
     <div class="row">
         <h1>Nouveau bouquet</h1>
         <form action="nouveauBouquet.jsp" method="post" class="form-control">
@@ -39,5 +32,4 @@
             <%=error%>
         </div>
     </div>
-
 <%@include file="../structure/footer.jsp" %>

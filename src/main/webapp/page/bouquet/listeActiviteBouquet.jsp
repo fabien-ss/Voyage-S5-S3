@@ -11,16 +11,17 @@
         actiBouq.setIdBouquet(request.getParameter("idBouquet"));
         activiteBouquet = actiBouq.getActiBouqById(connect);
         connect.close();
-    }catch (Exception e){
+    }
+    catch (Exception e){
         error = e.getMessage();
     }
 %>
-
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
     <div class="row">
         <table class="table">
             <tr>
-                <th>Nom bouquet dqsdq</th>
+                <th>Nom bouquet</th>
                 <th>Nom Activité</th>
             </tr>
             <% for(int i = 0; i < activiteBouquet.length; i++){  %>

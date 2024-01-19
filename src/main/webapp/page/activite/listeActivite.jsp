@@ -15,6 +15,7 @@
     connection.close();
 %>
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
 <div class="row">
     <h1>List de nos activités</h1>
     <table class="table table-active">

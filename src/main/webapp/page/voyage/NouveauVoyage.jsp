@@ -22,9 +22,10 @@
     connect.close();
 %>
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
     <div class="row">
         <form class="form-control mt-3" action="NouveauVoyage.jsp" method="post">
-            <h2>Nouveau voyage</h2>
+            <h2>Creation d'un nouveau voyage (1)</h2>
             <label>Bouquet</label>
             <select class="form-control" name="idBouquet">
                 <% for (Bouquet b: lsBouq) { %>

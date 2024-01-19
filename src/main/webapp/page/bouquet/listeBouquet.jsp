@@ -7,8 +7,9 @@
     Bouquet[] lsBouq = Bouquet.getAllBouquet(connect);
     connect.close();
 %>
-<%@include file="../structure/header.jsp"%>
-    <h1>Liste des bouquets</h1>
+<%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
+    <h1>Liste des bouquets valide (1)</h1>
     <ul class="list-group mt-3">
         <% for(int i=0;i<lsBouq.length;i++){ %>
             <li class="list-group-item">

@@ -20,6 +20,7 @@
     }
 %>
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
 
 <form class="form-control" action="updatePrix.jsp" method="post">
     <input type="number" name="prix" class="form-control">

@@ -8,7 +8,7 @@
 	connect.close();
 %>
 <%@include file="../structure/header.jsp" %>
-
+<%@include file="Header.jsp"%>
 	<div class="row">
 	<h1>Rechercher voyage par activite</h1>
         <form action="afficherVoyage.jsp" method="post" class="form-control  mt-3">
@@ -27,10 +27,11 @@
 		<h1>Rechercher voyage par prix</h1>
 		<form action="afficherVoyageEnTranche.jsp" method="post" class="form-control">
 			<div class="form-group" style="display: inline">
-				<input type="number" name="prixMin" class="form-control-sm">
+				<input type="number" name="prixMin" class="form-control">
 				<input type="number" name="prixMax" class="form-control">
 			</div>
 			<input type="submit" class="btn btn-primary mt-3">
 		</form>
 	</div>
+
 <%@include file="../structure/footer.jsp" %>

@@ -15,6 +15,7 @@
             EntreeStock entreeStock = new EntreeStock(request.getParameter("idactivite"),
                     request.getParameter("nombre"));
             entreeStock.Insert(connection);
+            connection.close();
         } catch (Exception e) {
             out.println(e);
         }

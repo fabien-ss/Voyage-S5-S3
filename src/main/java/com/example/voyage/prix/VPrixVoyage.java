@@ -11,7 +11,37 @@ public class VPrixVoyage {
         double prixMin = Double.valueOf(min);
         double prixMax = Double.valueOf(max);
         AssistantDb querier= new AssistantDb();
+        String sql= "select * from v_final where prix <= '"+prixMax+"' and prix >= '" +prixMin+"' order by prix desc" ;
+        System.out.println(sql);
+        Object[] valiny=querier.donneeJavaTable(connect, sql,"com.example.voyage.prix.VPrixVoyage");
+        System.out.println(valiny.length + " staille");
+        VPrixVoyage[] toReturn=new  VPrixVoyage[valiny.length];
+        for (int i = 0; i <valiny.length; i++) {
+            toReturn[i]=(VPrixVoyage) valiny[i];
+        }
+        return toReturn;
+    }
+
+    public VPrixVoyage[] getFromBdById2(Connection connect, String min, String max) throws Exception {
+        double prixMin = Double.valueOf(min);
+        double prixMax = Double.valueOf(max);
+        AssistantDb querier= new AssistantDb();
         String sql= "select * from v_prix_voyage where prix <= '"+prixMax+"' and prix >= '" +prixMin+"' order by prix" ;
+        System.out.println(sql);
+        Object[] valiny=querier.donneeJavaTable(connect, sql,"com.example.voyage.prix.VPrixVoyage");
+        System.out.println(valiny.length + " staille");
+        VPrixVoyage[] toReturn=new  VPrixVoyage[valiny.length];
+        for (int i = 0; i <valiny.length; i++) {
+            toReturn[i]=(VPrixVoyage) valiny[i];
+        }
+        return toReturn;
+    }
+
+    public VPrixVoyage[] getTotalPrix(Connection connect, String min, String max) throws Exception {
+        double prixMin = Double.valueOf(min);
+        double prixMax = Double.valueOf(max);
+        AssistantDb querier= new AssistantDb();
+        String sql= "select * from v_prix_voyage1 where prix <= '"+prixMax+"' and prix >= '" +prixMin+"' order by prix" ;
         System.out.println(sql);
         Object[] valiny=querier.donneeJavaTable(connect, sql,"com.example.voyage.prix.VPrixVoyage");
         System.out.println(valiny.length + " staille");

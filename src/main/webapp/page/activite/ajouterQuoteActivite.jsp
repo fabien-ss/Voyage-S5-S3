@@ -23,8 +23,10 @@
             error = e.getMessage();
         }
     }
+    connection.close();
 %>
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
 <h1>Ajouter Nouveau activité</h1>
     <div class="row">
         <form action="ajouterQuoteActivite.jsp" method="post" class="form-control">

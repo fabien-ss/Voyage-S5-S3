@@ -3,7 +3,8 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="com.example.voyage.dbUtil.ConnexionPgsql" %>
 <%@ page import="com.example.voyage.voyage.NombreVoyageActivite" %>
-<%@ page import="java.util.Vector" %><%--
+<%@ page import="java.util.Vector" %>
+<%--
   Created by IntelliJ IDEA.
   User: fabien
   Date: 1/11/24
@@ -23,6 +24,7 @@
             message = e.getMessage();
         }
     }
+    connection.close();
 %>
 <%@include file="../structure/header.jsp" %>
     <div class="row">

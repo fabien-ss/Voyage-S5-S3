@@ -41,6 +41,7 @@
 </head>
 <body>
 <%@include file="../structure/header.jsp" %>
+<%@include file="Header.jsp"%>
     <div>
         <h1>Maj Ajouter activité à<%bouquet.getNom();%></h1>
         <form method="post" action="ajouterActivite.jsp">
