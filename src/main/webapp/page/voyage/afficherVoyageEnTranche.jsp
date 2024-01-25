@@ -25,7 +25,8 @@
     connect.close();
 %>
 <%@include file="../structure/header.jsp" %>
-<div class="row">
+<%@include file="Header.jsp"%>
+<div class="col-9">
     <table class="table table-striped">
         <tr>
             <th>Nom</th>

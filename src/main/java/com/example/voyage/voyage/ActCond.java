@@ -9,9 +9,6 @@ import java.sql.*;
 
 import com.example.voyage.dbUtil.AssistantDb;
 import com.example.voyage.dbUtil.ConnexionPgsql;
-import generic.annotaion.Correspondance;
-import generic.dao.Model;
-import com.example.voyage.*;
 
 public class ActCond {
 

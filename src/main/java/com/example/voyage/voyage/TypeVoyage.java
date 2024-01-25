@@ -1,23 +1,24 @@
 package com.example.voyage.voyage;
 
 import com.example.voyage.dbUtil.ConnexionPgsql;
-import generic.annotaion.Correspondance;
+import generic.annotation.C;
 import generic.dao.Model;
+import generic.kodro.A;
 
 import java.sql.Connection;
 import java.util.List;
 
-@Correspondance(nomTable = "typevoyage")
-public class TypeVoyage extends Model {
-    @Correspondance(nomColonne = "idtypevoyage")
+@C(t = "typevoyage")
+public class TypeVoyage {
+    @C(c = "idtypevoyage")
     String idType;
-    @Correspondance
+    @C
     String nom;
 
     public static void main(String[] args) throws Exception {
         Connection c = ConnexionPgsql.dbConnect();
         System.out.println(c);
-        List<TypeVoyage> typeVoyageList = new TypeVoyage().select(c);
+        List<TypeVoyage> typeVoyageList = A.select(c, new TypeVoyage());
         for (TypeVoyage t: typeVoyageList) {
             System.out.println(t.nom);
         }

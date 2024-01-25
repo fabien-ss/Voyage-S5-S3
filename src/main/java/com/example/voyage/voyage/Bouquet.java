@@ -6,21 +6,31 @@
 package com.example.voyage.voyage;
 
 import com.example.voyage.dbUtil.AssistantDb;
-import com.example.voyage.dbUtil.ConnexionPgsql;
-import generic.annotaion.Correspondance;
+import generic.annotation.C;
 import generic.dao.Model;
 
 import java.sql.*;
-import java.util.List;
 
-@Correspondance(nomTable = "bouquet")
-public class Bouquet extends Model {
-    @Correspondance(nomColonne = "idbouquet")
-    int idBouquet;
-    @Correspondance(nomColonne = "nom")
+@C(t = "bouquet")
+public class Bouquet {
+    @C(c = "idbouquet")
+    Integer idBouquet;
+    @C(c = "nom")
     String nom;
 
     ActiBouq[] listActivite;
+
+    public void setIdBouquet(Integer idBouquet) {
+        this.idBouquet = idBouquet;
+    }
+
+    public ActiBouq[] getListActivite() {
+        return listActivite;
+    }
+
+    public void setListActivite(ActiBouq[] listActivite) {
+        this.listActivite = listActivite;
+    }
 
     public ActiBouq[] getListActivite(Connection connection) throws Exception {
         ActiBouq actiBouq = new ActiBouq();

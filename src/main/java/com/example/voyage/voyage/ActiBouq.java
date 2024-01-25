@@ -8,22 +8,19 @@ package com.example.voyage.voyage;
 import java.sql.*;
 
 import com.example.voyage.dbUtil.AssistantDb;
-import com.example.voyage.dbUtil.ConnexionPgsql;
-import generic.annotaion.Correspondance;
+import generic.annotation.C;
 import generic.dao.Model;
-import com.example.voyage.*;
 
-
-@Correspondance(nomTable = "v_bouquetActivite")
+@C(t = "v_bouquetActivite")
 public class ActiBouq extends Model {
 
-    @Correspondance(nomColonne = "idActivite")
-    int idActivite;
-    @Correspondance(nomColonne = "idBouquet")
-    int idBouquet;
-    @Correspondance(nomColonne = "nomBouquet")
+    @C(c = "idActivite")
+    Integer idActivite;
+    @C(c = "idBouquet")
+    Integer idBouquet;
+    @C(c = "nomBouquet")
     String nomBouquet;
-    @Correspondance(nomColonne = "nomActivite")
+    @C(c = "nomActivite")
     String nomActivite;
 
     public ActiBouq(String idb, String id) {
@@ -101,5 +98,13 @@ public class ActiBouq extends Model {
         catch (Exception e){
             throw new Exception("Impossible de convertir la valeur");
         }
+    }
+
+    public void setIdActivite(Integer idActivite) {
+        this.idActivite = idActivite;
+    }
+
+    public void setIdBouquet(Integer idBouquet) {
+        this.idBouquet = idBouquet;
     }
 }

@@ -23,7 +23,7 @@
 %>
 <%@include file="../structure/header.jsp" %>
 <%@include file="Header.jsp"%>
-    <div class="row">
+    <div class="col-9 formulaire">
         <form class="form-control mt-3" action="NouveauVoyage.jsp" method="post">
             <h2>Creation d'un nouveau voyage (1)</h2>
             <label>Bouquet</label>

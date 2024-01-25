@@ -5,8 +5,6 @@
  */
 package com.example.voyage.dbUtil;
 
-import generic.annotaion.Correspondance;
-import generic.dao.Model;
 
 import java.sql.*;
 import java.util.*;

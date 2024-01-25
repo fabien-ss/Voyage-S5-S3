@@ -6,22 +6,23 @@
 package com.example.voyage.voyage;
 
 import java.sql.*;
-import java.util.Vector;
 
 import com.example.voyage.dbUtil.AssistantDb;
 import com.example.voyage.dbUtil.Historique;
-import generic.annotaion.Correspondance;
-import generic.dao.Model;
+import generic.annotation.C;
+import generic.annotation.P;
 
-@Correspondance(nomTable = "activite")
-public class Activite extends Model {
+@C(t = "activite")
+@P(l = 5, s= "seq_activite", p = "AC")
+public class Activite {
 
-    @Correspondance(nomColonne = "idactivite")
-    int idActivite;
-    @Correspondance(nomColonne = "nom")
+    @C(c = "idactivite", pk = true)
+    Integer idActivite;
+    @C(c = "nom")
     String nom;
-    @Correspondance(nomColonne = "prix_unitaire")
-    double prix;
+    @C(c = "prix_unitaire")
+    Double prix;
+
     public Activite[] getActiviteByIdBouquet(Connection c, String idBouquet) throws Exception {
         AssistantDb querier= new AssistantDb();
         String sql="select * from activite where idactivite not in (select idactivite from assocbouqact where idbouquet='"+idBouquet+"')";
@@ -99,8 +100,6 @@ public class Activite extends Model {
 
     public Activite(){}
     public Activite(String nom, Connection c) throws Exception {
-        this.setPrefixe("");
-        setIdActivite(this.construirePK(c));
         setNom(nom);
     }
 
@@ -121,6 +120,12 @@ public class Activite extends Model {
     public void setNom(String nom) {
         this.nom = nom;
     }
-    
-    
+
+    public void setIdActivite(Integer idActivite) {
+        this.idActivite = idActivite;
+    }
+
+    public void setPrix(Double prix) {
+        this.prix = prix;
+    }
 }

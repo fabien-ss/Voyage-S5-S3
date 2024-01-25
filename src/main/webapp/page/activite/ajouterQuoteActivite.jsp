@@ -1,7 +1,8 @@
 <%@ page import="com.example.voyage.dbUtil.ConnexionPgsql" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="com.example.voyage.voyage.Activite" %>
-<%@ page import="com.example.voyage.stock.EntreeStock" %><%--
+<%@ page import="com.example.voyage.stock.EntreeStock" %>
+<%--
   Created by IntelliJ IDEA.
   User: fabien
   Date: 1/11/24
@@ -27,14 +28,14 @@
 %>
 <%@include file="../structure/header.jsp" %>
 <%@include file="Header.jsp"%>
-<h1>Ajouter Nouveau activité</h1>
-    <div class="row">
+    <div class="col-9 formulaire">
+        <h1>Ajouter Nouveau activité</h1>
         <form action="ajouterQuoteActivite.jsp" method="post" class="form-control">
             <div class="form-group">
                 <label class="col-form-label">Activité</label>
                 <select name="idactivite" class="form-select">
                     <% for (Activite act: activites) { %>
-                    <option value=<%=act.getIdActivite()%>><%=act.getNom()%></option>
+                        <option value=<%=act.getIdActivite()%>><%=act.getNom()%></option>
                     <% } %>
                 </select>
             </div>

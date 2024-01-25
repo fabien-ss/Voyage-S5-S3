@@ -15,13 +15,12 @@
         catch (Exception e){
             error = e.getMessage();
         }
-
     }
 %>
 <%@include file="../structure/header.jsp" %>
 <%@include file="Header.jsp"%>
-<h1>Nouvelle activité</h1>
-    <div class="row">
+    <div class="col-9 formulaire">
+        <h1>Nouvelle activité</h1>
         <form method="post" class="form-control" action="nouvelleActivite.jsp">
             <div class="form-group">
                 <label class="col-form-label">Nom</label>

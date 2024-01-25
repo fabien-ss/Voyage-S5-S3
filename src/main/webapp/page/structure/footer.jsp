@@ -1,8 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fabien
-  Date: 12/19/23
-  Time: 6:19 PM
-  To change this template use File | Settings | File Templates.
---%>
-</ div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+</body>
+</html>

@@ -29,11 +29,11 @@
 %>
 <%@include file="../structure/header.jsp" %>
 <%@include file="Header.jsp"%>
-<div class="container">
-    <form action="ajoutMainDoeuvre.jsp" method="post">
-        <label>Nom du poste</label>
-        <input type="text" name="nom">
-        <input type="submit" value="ok" name="ok">
+<div class="col-9 formulaire">
+    <form action="ajoutMainDoeuvre.jsp" method="post" class="form-control mt-5">
+        <label class="col-form-label">Nom du poste</label>
+        <input type="text" name="nom" class="form-control">
+        <input type="submit" value="ok" name="ok" class="btn btn-primary mt-3">
         <%  if(error != null){ %>
         <div class="alert-danger"><%=error%></div>
         <% }%>

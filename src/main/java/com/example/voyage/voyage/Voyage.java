@@ -1,21 +1,21 @@
 package com.example.voyage.voyage;
 
 import com.example.voyage.dbUtil.AssistantDb;
-import com.example.voyage.stock.EtatStock;
-import generic.annotaion.Correspondance;
-import generic.dao.Model;
+import generic.annotation.C;
+import generic.annotation.P;
 
 import java.sql.Connection;
 
-@Correspondance(nomTable = "voyage")
-public class Voyage extends Model {
-    @Correspondance(nomColonne = "idvoyage", primarykey = true)
+@P(p="V", l=5, s="seq_voyage")
+@C(t = "voyage")
+public class Voyage {
+    @C(c = "idvoyage", pk = true)
     String idVoyage;
-    @Correspondance(nomColonne = "nom")
+    @C(c= "nom")
     String nom;
-    @Correspondance(nomColonne = "idbouquet")
+    @C(c = "idbouquet")
     Integer idBouquet;
-    @Correspondance(nomColonne = "idtypevoyage")
+    @C(c = "idtypevoyage")
     String idTypeVoyage;
 
     public Voyage(){
@@ -36,19 +36,12 @@ public class Voyage extends Model {
     }
 
     public Voyage(String nom, String idBouquet, String idTypeVoyage, Connection c) throws Exception {
-        this.setPrefixe("V");
-        this.setLongPK(7);
-        this.setSequence("seq_voyage");
-        this.idVoyage = this.construirePK(c);
+
         this.nom = nom;
         this.setIdBouquet(idBouquet);
         this.idTypeVoyage = idTypeVoyage;
     }
     public Voyage(String nom, String idBouquet, Integer idTypeVoyage, Connection c) throws Exception {
-        this.setPrefixe("V");
-        this.setLongPK(7);
-        this.setSequence("seq_voyage");
-        this.idVoyage = this.construirePK(c);
         this.nom = nom;
         this.setIdBouquet(idBouquet);
 
@@ -101,4 +94,5 @@ public class Voyage extends Model {
     public String getIdVoyage() {
         return idVoyage;
     }
+
 }

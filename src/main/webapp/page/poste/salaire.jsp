@@ -25,16 +25,16 @@
 %>
 <%@include file="../structure/header.jsp" %>
 <%@include file="Header.jsp"%>
-<div class="container">
-    <form action="salaire.jsp" method="post">
-        <label>Poste</label>
-        <select name="idmaindoeuvre">
+<div class="col-9 formulaire">
+    <form action="salaire.jsp" method="post" class="form-control mt-5">
+        <label class="col-form-label">Poste</label>
+        <select name="idmaindoeuvre" class="form-select">
             <%for (Maindoeuvre maindoeuvre: maindoeuvres) { %>
                 <option value="<%=maindoeuvre.getIdMaindOuvre()%>"><%=maindoeuvre.getLabel()%></option>
             <% }%>
         </select>
-        <label>Nouveau</label>
-        <input type="number" name="prix">
-        <input type="submit" value="ok" name="ok">
+        <label class="col-form-label">Salaire</label>
+        <input type="number" name="prix" class="form-control">
+        <input type="submit" value="ok" name="ok" class="btn btn-primary mt-3">
     </form>
 </div>

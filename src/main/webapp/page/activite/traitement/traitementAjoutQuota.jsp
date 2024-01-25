@@ -9,6 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    String error = "";
     if(request.getParameter("ok") != null) {
         try {
             Connection connection = ConnexionPgsql.dbConnect();
@@ -16,9 +17,14 @@
                     request.getParameter("nombre"));
             entreeStock.Insert(connection);
             connection.close();
+            response.sendRedirect("../../stock/EtatDeStock.jsp");
         } catch (Exception e) {
             out.println(e);
         }
     }
-    response.sendRedirect("../../stock/EtatDeStock.jsp");
 %>
+<%if(error != ""){%>
+    <div class="alert-danger">
+        <%=error%>
+    </div>
+<%}%>

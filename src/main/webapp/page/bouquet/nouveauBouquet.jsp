@@ -19,14 +19,14 @@
 %>
 <%@include file="../structure/header.jsp" %>
 <%@include file="Header.jsp"%>
-    <div class="row">
+    <div class="col-9 formulaire">
         <h1>Nouveau bouquet</h1>
         <form action="nouveauBouquet.jsp" method="post" class="form-control">
             <div class="form-group">
                 <label class="col-form-label">Nom</label>
                 <input type="text" name="nom" class="form-control">
             </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary mt-3">
         </form>
         <div class="alert">
             <%=error%>

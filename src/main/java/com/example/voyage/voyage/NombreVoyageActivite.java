@@ -7,9 +7,6 @@ package com.example.voyage.voyage;
 
 import com.example.voyage.dbUtil.AssistantDb;
 import com.example.voyage.dbUtil.ConnexionPgsql;
-import generic.annotaion.Correspondance;
-import generic.dao.Model;
-import com.example.voyage.*;
 import com.example.voyage.stock.*;
 
 import java.sql.Connection;
@@ -22,9 +19,7 @@ public class NombreVoyageActivite {
 
     public void insererSortieStock(Connection connect,String idVoyage,String nbVoyages)throws Exception{
         boolean mine = false;
-        if(connect.isClosed() || connect == null)
-            connect = ConnexionPgsql.dbConnect();
-            mine = true;
+
         int nbVoyage = Integer.valueOf(nbVoyages);
         NombreVoyageActivite[] depense = getNbActiviteWithForNbVoyage(connect,idVoyage,nbVoyage);
         EtatStock[] ressource=(new EtatStock()).getAll(connect);
@@ -40,7 +35,7 @@ public class NombreVoyageActivite {
             }
         }
         inserezSortie(connect,depense);
-        if(mine) connect.close();
+      //  if(mine) connect.close();
     }
 
 
